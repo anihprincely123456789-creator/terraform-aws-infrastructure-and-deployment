@@ -75,6 +75,36 @@ terraform destroy
 - Reusable deployment configuration
 - Automated web server setup
 
+# Screenshots
+
+## Project Structure
+
+![Project Structure](screenshots/project-structure.png)
+
+---
+
+## Terraform Apply
+
+![Terraform Apply](screenshots/terraform-apply.png)
+
+---
+
+## EC2 Instance Running
+
+![EC2 Instance](screenshots/ec2-instance.png)
+
+---
+
+## Security Group
+
+![Security Group](screenshots/security-group.png)
+
+---
+
+## Website Running
+
+![Website](screenshots/website-running.png)
+
 ---
 
 ## Author
