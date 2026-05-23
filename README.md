@@ -294,8 +294,8 @@ This script automatically configures the EC2 instance during launch.
 
 | Command | Purpose |
 |---|---|
-| sudo update -y | Updates Linux packages |
-| sudo install httpd -y | Installs Apache |
+| sudo dnf update -y | Updates Linux packages |
+| sudo dnf install httpd -y | Installs Apache |
 | sudo systemctl start httpd | Starts Apache |
 | sudo systemctl enable httpd | Starts Apache on boot |
 | echo | Creates website homepage |
