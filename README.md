@@ -39,7 +39,6 @@ The website is automatically deployed during EC2 instance creation using a user-
 terraform-aws-website-deployment/
 │
 ├── provider.tf
-├── variables.tf
 ├── main.tf
 ├── outputs.tf
 ├── user-data.sh
@@ -54,7 +53,7 @@ terraform-aws-website-deployment/
 
 ```hcl
 provider "aws" {
-  region = var.region
+  region = sa-east-1
 }
 ```
 
@@ -68,27 +67,6 @@ This block configures Terraform to use AWS as the cloud provider.
 | region | Defines the AWS region for deployment |
 | var.region | Uses a Terraform variable instead of hardcoding |
 
----
-
-# Variables Configuration
-
-## File: `variables.tf`
-
-```hcl
-variable "region" {
-  default = "us-east-1"
-}
-```
-
-### Explanation
-
-This file defines reusable Terraform variables.
-
-### Benefits
-
-- Makes code reusable
-- Easier to maintain
-- Avoids hardcoding values
 
 ---
 
