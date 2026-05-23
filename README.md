@@ -279,13 +279,13 @@ This resource launches the EC2 instance that hosts the website.
 ```bash
 #!/bin/bash
 
-yum update -y
-yum install httpd -y
+sudo dnf update -y
+sudo dnf install -y httpd
 
-systemctl start httpd
-systemctl enable httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
 
-echo "<h1>Website Deployed Successfully Using Terraform By Anih Princely</h1>" > /var/www/html/index.html
+echo "<h1>Website Deployed with Terraform By Anih Princely</h1>" | sudo tee /var/www/html/index.html
 ```
 
 ### Explanation
@@ -294,10 +294,10 @@ This script automatically configures the EC2 instance during launch.
 
 | Command | Purpose |
 |---|---|
-| yum update -y | Updates Linux packages |
-| yum install httpd -y | Installs Apache |
-| systemctl start httpd | Starts Apache |
-| systemctl enable httpd | Starts Apache on boot |
+| sudo update -y | Updates Linux packages |
+| sudo install httpd -y | Installs Apache |
+| sudo systemctl start httpd | Starts Apache |
+| sudo systemctl enable httpd | Starts Apache on boot |
 | echo | Creates website homepage |
 
 ---
@@ -423,7 +423,7 @@ Possible future enhancements:
 - Load balancer integration
 - Auto Scaling Groups
 - HTTPS configuration
-- Remote state management using S3
+
 
 ---
 
